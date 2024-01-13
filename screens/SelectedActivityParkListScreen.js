@@ -160,6 +160,7 @@ function SelectedActivityParkListScreen({
   function handleParkPress(name) {
     onPickPark(name);
     setSelectedParkName(name);
+    resetSingleActivity("");
   }
 
   function pickedNewsHandler() {

@@ -96,6 +96,7 @@ export default function App() {
         resetPark={resetParkHandler}
         onPickAbout={pickedAboutHandler}
         onPickNews={pickedNewsHandler}
+        onPickPark={pickedParkHandler}
       />
     );
   } else if (activityButton) {
