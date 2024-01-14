@@ -1,19 +1,20 @@
-import { StatusBar } from "expo-status-bar";
-import { startTransition } from "react";
-import { Platform, StyleSheet, Text, View, FlatList } from "react-native";
 import SelectedParkScreen from "./screens/SelectedParkScreen";
 import SelectedActivityParkListScreen from "./screens/SelectedActivityParkListScreen";
 import ParkListScreen from "./screens/ParkListScreen";
-import TestScreen from "./screens/TestScreen";
-import PARKS from "./assets/data/parksList";
 import React, { useEffect, useState } from "react";
 import NewsScreen from "./screens/NewsScreen";
 import AboutScreen from "./screens/AboutScreen";
 import ActivitiesScreen from "./screens/ActivitiesScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default function App() {
+//const Stack = createNativeStackNavigator();
+
+//function HomeScreen()
+
+function App() {
   //State for ParkListScreen selection
-  const [placesButton, setPlacesButton] = useState();
+
   const [userPark, setUserPark] = useState();
   const [newsButton, setNewsButton] = useState();
   const [aboutButton, setAboutButton] = useState();
@@ -123,3 +124,22 @@ export default function App() {
   return screen;
   //<ParkListScreen />;
 }
+
+export default App;
+/*
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: "My home" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
+*/
